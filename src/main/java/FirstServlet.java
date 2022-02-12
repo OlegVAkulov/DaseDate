@@ -11,7 +11,9 @@ public class FirstServlet extends HttpServlet {
         HttpSession session = request.getSession();
         Integer count = (Integer) session.getAttribute("count");
         if (count == null){
+
             session.setAttribute("count", 1);
+            count = 1;
         }else {
             session.setAttribute("count", count + 1);
         }
