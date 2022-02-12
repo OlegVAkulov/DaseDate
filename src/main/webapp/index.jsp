@@ -10,9 +10,13 @@
 <body>
 <h1>
     <p>
-        <% java.util.Date now = new java.util.Date();
-        String someTime = "Date today: " + now; %>
-        <%= someTime %>
+        <%
+            java.util.Date now = new java.util.Date();
+        String someTime = "Date today: " + now;
+        %>
+        <%= someTime
+
+        %>
 
     </p>
     <p>
