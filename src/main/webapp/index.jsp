@@ -3,6 +3,9 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
+    <p>
+        <%= "Start" %>
+    </p>
 </head>
 <body>
 <h1>
