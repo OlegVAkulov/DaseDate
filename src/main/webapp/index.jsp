@@ -11,9 +11,12 @@
 <h1>
     <p>
         <%= new java.util.Date() %>
-    <%= "Base Date" %>
+
     </p>
-</h1>
+    <p>
+
+        <%= "Base Date" %>
+    </p>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
 <a href="FirstServlet">Hello FirstServlet</a>
