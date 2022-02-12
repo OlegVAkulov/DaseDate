@@ -25,8 +25,8 @@ public class FirstServlet extends HttpServlet {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT name from people");
             while (resultSet.next()){
-                pw.println(resultSet.getString("name"));
-                pw.println(resultSet.getString("surname"));
+                pw.println(resultSet.getString("name    " + "surname    " + "age"));
+                
             }
             statement.close();
         } catch (SQLException throwables) {
