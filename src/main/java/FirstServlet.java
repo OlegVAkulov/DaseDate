@@ -28,6 +28,11 @@ public class FirstServlet extends HttpServlet {
                 pw.println(resultSet.getString("name"));
 
             }
+            ResultSet resultSet1 = statement.executeQuery("SELECT surname from people");
+            while (resultSet.next()){
+                pw.println(resultSet1.getString("surname"));
+
+            }
             statement.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
