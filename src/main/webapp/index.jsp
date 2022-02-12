@@ -10,6 +10,7 @@
 <body>
 <h1>
     <p>
+        <%= new java.util.Date() %>
     <%= "Base Date" %>
     </p>
 </h1>
