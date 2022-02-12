@@ -8,21 +8,14 @@
     </p>
 </head>
 <body>
-<h1>
+<h1>Testing JSP</h1>
 
-    <p><% String name = request.getParameter("name");%>
-        <%=
-        "Hello, " + name
-        %>
+<%--    <p>--%>
 
-    </p>
-    <p>
-
-        <%= "Base Date" %>
-    </p>
+<%--    </p>--%>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
 <a href="FirstServlet">Hello FirstServlet</a>
-</h1>
+
 </body>
 </html>
