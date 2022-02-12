@@ -23,12 +23,11 @@ public class FirstServlet extends HttpServlet {
                     "jdbc:postgresql://192.168.0.32:5432/test_db",
                     "postgres", "123qwerty321");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT name from people");
+            ResultSet resultSet = statement.executeQuery("SELECT ALL from people");
             while (resultSet.next()){
-                pw.println(resultSet.getString("surname"));
+                pw.println(resultSet.getString("name"));
 
             }
-
             statement.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
