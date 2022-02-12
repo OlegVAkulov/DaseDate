@@ -9,7 +9,7 @@
 </h1>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
-<a href="FirstServlet">Hello FirstServlet</a>
+<%--<a href="FirstServlet">Hello FirstServlet</a>--%>
 
 </body>
 </html>
