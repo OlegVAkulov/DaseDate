@@ -10,13 +10,16 @@
 <body>
 <h1>
     <p>
-        <%@ page import="java.util.Date" %>
+        <%@ page import="java.util.Date, logic.TestClass" %>
 
-        <%
+        <% TestClass testClass = new TestClass();
 
         %>
         <%=
         new Date()
+        %>
+        <%=
+        testClass.getInfo()
         %>
 
     </p>
@@ -27,6 +30,6 @@
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
 <a href="FirstServlet">Hello FirstServlet</a>
-
+</h1>
 </body>
 </html>
