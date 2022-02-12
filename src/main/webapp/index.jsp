@@ -9,25 +9,16 @@
 </head>
 <body>
 <h1>
-    <p>
-        <%@ page import="java.util.Date, logic.TestClass" %>
 
-        <% TestClass testClass = new TestClass();
-
-        %>
+    <p><% String name = request.getParameter("name")%>
         <%=
-        new Date()
-        %>
-        </p>
-    <p>
-        <%=
-        testClass.getInfo()
+        "Hello, " + name
         %>
 
     </p>
     <p>
 
-        <%= "Base Date #1" %>
+        <%= "Base Date" %>
     </p>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
