@@ -16,7 +16,9 @@ public class FirstServlet extends HttpServlet {
         pw.println("<h1>Privet, " + name + " " + surname + "</h1>");
         pw.println("</html>");
 
-        response.sendRedirect("/index.jsp");
+//        response.sendRedirect("/index.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+        dispatcher.forward(request, response);
     }
 
     @Override
