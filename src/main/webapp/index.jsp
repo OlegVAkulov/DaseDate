@@ -11,7 +11,7 @@
 <h1>
     <p>
         <% java.util.Date now = new java.util.Date();
-        String someTime = "Date today: " + now%>
+        String someTime = "Date today: " + now; %>
         <%= someTime %>
 
     </p>
