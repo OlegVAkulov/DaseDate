@@ -18,6 +18,8 @@
         <%=
         new Date()
         %>
+        </p>
+    <p>
         <%=
         testClass.getInfo()
         %>
