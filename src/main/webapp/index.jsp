@@ -2,10 +2,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>JSP - Hello World</title>
-    <p>
+    <title>
+    
         <%= "Start" %>
-    </p>
+
+    </title>
 </head>
 <body>
 <h1>
