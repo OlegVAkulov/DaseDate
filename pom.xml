@@ -16,7 +16,7 @@
         <junit.version>5.7.0</junit.version>
     </properties>
 
-    
+
 
     <dependencies>
         <dependency>
