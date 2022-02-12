@@ -27,7 +27,7 @@ public class FirstServlet extends HttpServlet {
 
 
 
-        getServletContext().getRequestDispatcher("/showCart.index.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/showCart.jsp").forward(request, response);
 
 //        PrintWriter pw = response.getWriter();
 //        pw.println("<html>");
