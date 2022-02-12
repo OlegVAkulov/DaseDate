@@ -9,7 +9,7 @@ public class DeleteCookiesServlet extends HttpServlet {
 
     cookie.setMaxAge(0);
 //    cookie.setMaxAge(-1);
-    
+
     response.addCookie(cookie);
     }
 

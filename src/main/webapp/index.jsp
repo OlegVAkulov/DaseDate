@@ -16,6 +16,9 @@
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
 <a href="FirstServlet">Hello FirstServlet</a>
+<a href="SetCookiesServlet">SetCookiesServlet</a>
+<a href="GetCookiesServlet">GetCookiesServlet</a>
+<a href="DeleteCookiesServlet">DeleteCookiesServlet</a>
 
 </body>
 </html>
