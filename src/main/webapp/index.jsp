@@ -15,7 +15,7 @@
     </p>
     <p>
 
-        <%= "Base Date" %>
+        <%= "Base Date #1" %>
     </p>
 <br/>
 <a href="hello-servlet">Hello Servlet</a>
