@@ -21,15 +21,20 @@
     <strong>User Surname</strong>:<input type="text" name="surname"><br>
     <strong>User Age</strong>:<input type="number" name="age"><br>
     <input type="submit" value="INSERT">
-<%--    <%  HttpSession httpSession = request.getSession();--%>
-<%--        User user = (User) session.getAttribute("user");--%>
-<%--        String name = request.getParameter("name");--%>
-<%--        String surname = request.getParameter("surname");--%>
-<%--        int age = Integer.parseInt(request.getParameter("age"));--%>
-<%--        user.setName(name);--%>
-<%--        user.setSurname(surname);--%>
-<%--        user.setAge(age);--%>
-<%--        httpSession.setAttribute("user", user);--%>
+    <%  HttpSession httpSession = request.getSession();
+        User user = (User) session.getAttribute("user");
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
+        int age = Integer.parseInt(request.getParameter("age"));
+        user.setName(name);
+        user.setSurname(surname);
+        user.setAge(age);
+        httpSession.setAttribute("user", user);
+        PrintWriter pw = response.getWriter();
+        %>
+    <%=
+    pw.println(user.toString())
+    %>
 
 <%--        try {--%>
 <%--            Class.forName("org.postgresql.Driver");--%>
