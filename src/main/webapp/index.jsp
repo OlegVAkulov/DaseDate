@@ -12,6 +12,7 @@
 <br/>
 
 <a href="FirstServlet">Data Base</a>
+<a href="GetCookiesServlet">Add to Base</a>
 
 
 </body>
