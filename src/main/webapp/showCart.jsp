@@ -35,8 +35,8 @@
             statement.addBatch("INSERT INTO people VALUES" +
                     "(name , surname, age)");
             statement.close();
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
-            dispatcher.forward(request, response);
+//            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+//            dispatcher.forward(request, response);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
