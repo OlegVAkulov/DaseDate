@@ -20,17 +20,16 @@ public class GetCookiesServlet extends HttpServlet {
     public void init() {
         userDAO = new UserDao();
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
-
-            List<User> listUser = userDAO.selectAllUsers();
-            request.setAttribute("listUser", listUser);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
-            dispatcher.forward(request, response);
-        }
-
+        PrintWriter pw = response.getWriter();
+        List<User> listUser = userDAO.selectAllUsers();
+        request.setAttribute("listUser", listUser);
+        pw.println(listUser);
+//            RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
+//            dispatcher.forward(request, response);
+    }
 
 
     @Override
