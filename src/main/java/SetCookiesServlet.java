@@ -42,7 +42,7 @@ public class SetCookiesServlet extends HttpServlet {
         response.addCookie(cookie2);
         response.addCookie(cookie3);
         pw.println("<head>");
-        pw.println("<input type=\"submit\" value=\"ADD TO BASE\">");
+        pw.println("<input type=\"/GetCookiesServlet\" value=\"ADD TO BASE\">");
         pw.println("</head>");
 
 
