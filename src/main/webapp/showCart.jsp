@@ -1,6 +1,6 @@
 <%@ page import="java.sql.*" %>
 <%@ page import="java.io.PrintWriter" %>
-<%@ page import="somePackage.User" %><%--
+<%@ page import="User" %><%--
   Created by IntelliJ IDEA.
   User: akulo
   Date: 12.02.2022

@@ -1,28 +1,27 @@
-import somePackage.User;
-
-import javax.servlet.*;
+import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.*;
-import java.util.Scanner;
 
 @WebServlet(name = "GetCookiesServlet", value = "/GetCookiesServlet")
 public class GetCookiesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
-        Cookie[] cookies = request.getCookies();
+//        Cookie[] cookies = request.getCookies();
 //        String name = String.valueOf(cookies[0]);
 //        String surname = String.valueOf(cookies[1]);
 //        int age = Integer.parseInt(String.valueOf(cookies[2]));
         pw.println("<head>");
-        pw.println("cookies length: " + cookies.length);
+//        pw.println("cookies length: " + cookies.length);
 
-        for (Cookie cookie : cookies) {
-            pw.println("<h1>" + cookie.getName() + "  " + cookie.getValue() + "</h1>");
-        }
+
+//        pw.println("<h1>"+ user.toString +"</h1>");
+
         pw.println("</head>");
         try {
             Class.forName("org.postgresql.Driver");

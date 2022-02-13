@@ -1,9 +1,7 @@
-package somePackage;
-
 public class User {
-    private String name;
-    private String surname;
-    private int age;
+    public String name;
+    public String surname;
+    public int age;
 
     public String getName() {
         return name;

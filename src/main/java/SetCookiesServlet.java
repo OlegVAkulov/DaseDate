@@ -1,17 +1,20 @@
-import somePackage.User;
-
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 
 @WebServlet(name = "SetCookiesServlet", value = "/SetCookiesServlet")
 public class SetCookiesServlet extends HttpServlet {
+    User user = new User();
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        User user = new User();
+
 
         PrintWriter pw = response.getWriter();
 
@@ -38,22 +41,42 @@ public class SetCookiesServlet extends HttpServlet {
         cookie2.setMaxAge(24 * 60 * 60);
         cookie3.setMaxAge(24 * 60 * 60);
 
-        HttpSession session = request.getSession();
-        String name1 = (String) session.getAttribute("name");
-        String surname1 = (String) session.getAttribute("surname");
-        Integer age1 = (Integer) session.getAttribute("age");
+//        HttpSession session = request.getSession();
+//        String name1 = (String) session.getAttribute("name");
+//        String surname1 = (String) session.getAttribute("surname");
+//        Integer age1 = (Integer) session.getAttribute("age");
+        String name1 = String.valueOf(cookie1);
+        String surname1 = String.valueOf(cookie2);
+        int age1 = Integer.parseInt(String.valueOf(cookie3));
 
+
+        user.setName(name1);
+        user.setSurname(surname1);
+        user.setAge(age1);
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:postgresql://192.168.0.32:5432/test_db",
+                    "postgres", "123qwerty321");
+            Statement statement = connection.createStatement();
+            statement.executeQuery("INSERT into people(name, surname,age) VALUES (user.getName, user.getSurname, user.getAge)");
+            statement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
 
         response.addCookie(cookie1);
         response.addCookie(cookie2);
         response.addCookie(cookie3);
-//        user.setName(name1);
-//        user.setSurname(surname1);
-//        user.setAge(age1);
+
 
         pw.println("<head>");
-        pw.println("<a href=\"GetCookiesServlet\">Add to Base</a>");
+        pw.println("<a href=\"FirstServlet\">Data Base</a>");
         pw.println("</head>");
 
 
