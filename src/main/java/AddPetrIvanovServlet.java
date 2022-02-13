@@ -7,9 +7,14 @@ import java.sql.*;
 
 @WebServlet(name = "AddPetrIvanovServlet", value = "/AddPetrIvanovServlet")
 public class AddPetrIvanovServlet extends HttpServlet {
+    String name;
+    String surname;
+    int age;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter pw = response.getWriter();
+        name = "Petr";
+        surname = "Ivanov";
+        age = 1986;
 
         try {
             Class.forName("org.postgresql.Driver");
@@ -23,7 +28,7 @@ public class AddPetrIvanovServlet extends HttpServlet {
             Statement statement = connection.createStatement();
 
             PreparedStatement preparedStatement = connection.prepareStatement
-                    ("INSERT into people(name, surname,age) VALUES ('Petr', 'Ivanov', 1986)");
+                    ("INSERT into people(name, surname,age) VALUES (name , surname, age)");
 
             preparedStatement.executeUpdate();
             connection.close();

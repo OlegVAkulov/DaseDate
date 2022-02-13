@@ -8,7 +8,9 @@ import java.sql.*;
 
 @WebServlet(name = "SetCookiesServlet", value = "/SetCookiesServlet")
 public class SetCookiesServlet extends HttpServlet {
-    User user = new User();
+    String name1;
+    String surname1;
+    int age1;
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
@@ -38,9 +40,9 @@ public class SetCookiesServlet extends HttpServlet {
         cookie2.setMaxAge(24 * 60 * 60);
         cookie3.setMaxAge(24 * 60 * 60);
 
-        String name1 = String.valueOf(cookie1);
-        String surname1 = String.valueOf(cookie2);
-        int age1 = Integer.parseInt(String.valueOf(cookie3));
+        name1 = String.valueOf(cookie1);
+        surname1 = String.valueOf(cookie2);
+        age1 = Integer.parseInt(String.valueOf(cookie3));
 
         try {
             Class.forName("org.postgresql.Driver");
