@@ -14,6 +14,7 @@
 <a href="FirstServlet">Data Base</a>
 <a href="GetCookiesServlet">Add to Base</a>
 <a href="SetCookiesServlet">Set name</a>
+<a href="AddPetrIvanovServlet">AddPetrIvanov</a>
 
 
 </body>
