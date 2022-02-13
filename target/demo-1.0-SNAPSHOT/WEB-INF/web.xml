@@ -11,4 +11,18 @@
 <!--        <servlet-name>FirstServlet</servlet-name>-->
 <!--        <url-pattern>FirstServlet</url-pattern>-->
 <!--    </servlet-mapping>-->
+    <display-name>Base Date</display-name>
+    <servlet>
+        <servlet-name>SetCookiesServlet</servlet-name>
+        <servlet-class>SetCookiesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetCookiesServlet</servlet-name>
+        <servlet-class>GetCookiesServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DeleteCookiesServlet</servlet-name>
+        <servlet-class>DeleteCookiesServlet</servlet-class>
+    </servlet>
+
 </web-app>
