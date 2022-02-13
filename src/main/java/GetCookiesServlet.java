@@ -21,7 +21,12 @@ public class GetCookiesServlet extends HttpServlet {
         String surname = (String) session.getAttribute("surname");
         Integer age = (Integer) session.getAttribute("age");
 
+
         PrintWriter pw = response.getWriter();
+        pw.println("<head>");
+        pw.println("<h1>" + name + "  " + surname + " " + age + "</h1>");
+        pw.println("<head>");
+
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
