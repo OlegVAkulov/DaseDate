@@ -15,14 +15,13 @@
 </head>
 <body>
 <h3>Input new element</h3>
-<form >
+<form>
     <strong>User Name</strong>:<input type="text" name="name"><br>
     <strong>User Surname</strong>:<input type="text" name="surname"><br>
     <strong>User Age</strong>:<input type="number" name="age"><br>
     <input type="submit" value="INSERT">
     <%
         PrintWriter pw = response.getWriter();
-
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
@@ -33,11 +32,11 @@
                     "jdbc:postgresql://192.168.0.32:5432/test_db",
                     "postgres", "123qwerty321");
             Statement statement = connection.createStatement();
-            statement.executeQuery("INSERT name INTO people");
+            statement.executeQuery("INSERT INTO people VALUES(" +
+                    "(name , surname, age)");
             statement.close();
-            RequestDispatcher dispatcher =  request.getRequestDispatcher("/index.jsp");
-            dispatcher.forward(request,response);
-
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
+            dispatcher.forward(request, response);
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -56,9 +55,6 @@
 <%--</head>--%>
 <%--<body>--%>
 <%--<h1>New Page</h1>--%>
-
-
-
 
 
 <%--</body>--%>
