@@ -33,10 +33,11 @@
                     "jdbc:postgresql://192.168.0.32:5432/test_db",
                     "postgres", "123qwerty321");
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("INSERT name INTO people");
-
-
+            statement.executeQuery("INSERT name INTO people");
             statement.close();
+            RequestDispatcher dispatcher =  request.getRequestDispatcher("/index.jsp");
+            dispatcher.forward(request,response);
+
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
