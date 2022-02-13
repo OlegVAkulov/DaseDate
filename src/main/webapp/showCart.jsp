@@ -6,15 +6,20 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Show cart</title>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
 </head>
 <body>
-<%@ page import="somePackage.Cart" %>
-<% Cart cart = (Cart) session.getAttribute("cart");%>
-<p> Name of:  <%= cart.getName()%></p>
-<p> Qauntity of: <%= cart.getQuantity()%></p>
-
+<h3>Login with email and password</h3>
+<form action="Login" method="post">
+    <strong>User Email</strong>:<input type="text" name="email"><br>
+    <strong>Password</strong>:<input type="password" name="password"><br>
+    <input type="submit" value="Login">
+</form>
+<br>
+If you are new user, please <a href="register.html">register</a>.
 </body>
 </html>
