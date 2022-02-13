@@ -10,12 +10,6 @@ public class SetCookiesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
-        Cookie cookie1 = new Cookie("name", "");
-    Cookie cookie2 = new Cookie("surname", "");
-    Cookie cookie3 = new Cookie("age", "");
-        cookie1.setMaxAge(24 * 60 * 60);
-        cookie2.setMaxAge(24 * 60 * 60);
-        cookie3.setMaxAge(24 * 60 * 60);
 
         pw.println("<head>");
         pw.println("<body>");
@@ -28,16 +22,23 @@ public class SetCookiesServlet extends HttpServlet {
         pw.println("</form>");
         pw.println("</body>");
         pw.println("</head>");
-    response.addCookie(cookie1);
-    response.addCookie(cookie2);
-    response.addCookie(cookie3);
-    Cookie[] cookies= request.getCookies();
-        pw.println("<head>");
-for (Cookie cookie:cookies){
-    pw.println("<h1>" + cookie.getName() +"  " + cookie.getValue() + "</h1>");
-}
-        pw.println("</head>");
+        Cookie cookie1 = new Cookie("name", "");
+        Cookie cookie2 = new Cookie("surname", "");
+        Cookie cookie3 = new Cookie("age", "");
+        cookie1.setMaxAge(24 * 60 * 60);
+        cookie2.setMaxAge(24 * 60 * 60);
+        cookie3.setMaxAge(24 * 60 * 60);
 
+
+        response.addCookie(cookie1);
+        response.addCookie(cookie2);
+        response.addCookie(cookie3);
+        Cookie[] cookies = request.getCookies();
+        pw.println("<head>");
+        for (Cookie cookie : cookies) {
+            pw.println("<h1>" + cookie.getName() + "  " + cookie.getValue() + "</h1>");
+        }
+        pw.println("</head>");
     }
 
     @Override
