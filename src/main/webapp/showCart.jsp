@@ -13,14 +13,14 @@
     <title>Login Page</title>
 </head>
 <body>
-<h3>Login with email and password</h3>
-<form >//action="Login" method="post"
-    <strong>User Email</strong>:<input type="text" name="email"><br>
-    <strong>Password</strong>:<input type="password" name="password"><br>
-    <input type="submit" value="Login">
+<h3>Input new element</h3>
+<form >
+    <strong>User Name</strong>:<input type="text" name="name"><br>
+    <strong>User Surname</strong>:<input type="text" name="surname"><br>
+    <strong>User Age</strong>:<input type="text" name="age"><br>
+    <input type="submit" value="INSERT">
 </form>
-<br>
-If you are new user, please <a href="register.html">register</a>.
+
 </body>
 </html>
 <%--<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>--%>
