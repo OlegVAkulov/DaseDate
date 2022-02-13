@@ -30,10 +30,10 @@ public class GetCookiesServlet extends HttpServlet {
 //        Integer age = (Integer) session.getAttribute("age");
 
 
-
-        pw.println("<head>");
-        pw.println("<h1>" + name + "  " + surname + " " + age + "</h1>");
-        pw.println("<head>");
+//
+//        pw.println("<head>");
+//        pw.println("<h1>" + name + "  " + surname + " " + age + "</h1>");
+//        pw.println("<head>");
 
         try {
             Class.forName("org.postgresql.Driver");

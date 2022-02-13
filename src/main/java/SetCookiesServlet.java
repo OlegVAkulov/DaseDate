@@ -53,8 +53,6 @@ public class SetCookiesServlet extends HttpServlet {
 //        user.setAge(age1);
 
         pw.println("<head>");
-//        pw.println("<h1>" +user.getName() + "  " + user.getSurname() + "  " + user.getAge() + " </h1>");
-
         pw.println("<a href=\"GetCookiesServlet\">Add to Base</a>");
         pw.println("</head>");
 
