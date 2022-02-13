@@ -42,7 +42,7 @@ public class FirstServlet extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-        response.sendRedirect("https://www.google.com");
+
     }
 
     @Override
