@@ -12,12 +12,21 @@ import java.util.Scanner;
 public class GetCookiesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Cookie[] cookies = request.getCookies();
+        PrintWriter pw = response.getWriter();
+        pw.println("<head>");
+        for (Cookie cookie : cookies) {
+            pw.println("<h1>" + cookie.getName() + "  " + cookie.getValue() + "</h1>");
+        }
+        pw.println("</head>");
+
+
 //        HttpSession session = request.getSession();
 //        User user = (User)session.getAttribute("user");
-
-
-        RequestDispatcher dispatcher =  request.getRequestDispatcher("/showCart.jsp");
-        dispatcher.forward(request,response);
+//
+//
+//        RequestDispatcher dispatcher =  request.getRequestDispatcher("/showCart.jsp");
+//        dispatcher.forward(request,response);
 
     }
 
