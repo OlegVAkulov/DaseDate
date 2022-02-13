@@ -24,11 +24,11 @@ public class FirstServlet extends HttpServlet {
                     "postgres", "123qwerty321");
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * from people");
-            pw.println("ID\t\tNAME\t\tSURNAME\t\tAGE");
+            pw.println("ID\tNAME\t\tSURNAME\t\tAGE");
             pw.println();
             while (resultSet.next()){
                 pw.print(resultSet.getString("id"));
-                pw.print("\t\t");
+                pw.print("\t");
                 pw.print(resultSet.getString("name"));
                 pw.print("\t\t");
                 pw.print(resultSet.getString("surname" ));
