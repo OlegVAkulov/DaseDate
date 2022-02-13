@@ -14,9 +14,9 @@ public class GetCookiesServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         PrintWriter pw = response.getWriter();
         Cookie[] cookies = request.getCookies();
-        String name = String.valueOf(cookies[0]);
-        String surname = String.valueOf(cookies[1]);
-        int age = Integer.parseInt(String.valueOf(cookies[2]));
+//        String name = String.valueOf(cookies[0]);
+//        String surname = String.valueOf(cookies[1]);
+//        int age = Integer.parseInt(String.valueOf(cookies[2]));
         pw.println("<head>");
         for (Cookie cookie : cookies) {
             pw.println("<h1>" + cookie.getName() + "  " + cookie.getValue() + "</h1>");
@@ -62,17 +62,7 @@ public class GetCookiesServlet extends HttpServlet {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-//        pw.println("<head>");
-//        for (Cookie cookie : cookies) {
-//            pw.println("<h1>" + cookie.getName() + "  " + cookie.getValue() + "</h1>");
-//        }
-//        pw.println("</head>");
-//        HttpSession session = request.getSession();
-//        User user = (User)session.getAttribute("user");
-//
-//
-//        RequestDispatcher dispatcher =  request.getRequestDispatcher("/showCart.jsp");
-//        dispatcher.forward(request,response);
+
     }
 
     @Override
