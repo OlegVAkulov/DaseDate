@@ -12,14 +12,14 @@ import java.util.Scanner;
 public class GetCookiesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//        Cookie[] cookies = request.getCookies();
-//        Cookie name = cookies[0];
-//        Cookie surname = cookies[1];
-//        Cookie age = cookies[2];
+        Cookie[] cookies = request.getCookies();
+        Cookie name = cookies[0];
+        Cookie surname = cookies[1];
+        Cookie age = cookies[2];
         HttpSession session = request.getSession();
-        String name = (String) session.getAttribute("name");
-        String surname = (String) session.getAttribute("surname");
-        Integer age = (Integer) session.getAttribute("age");
+//        String name = (String) session.getAttribute("name");
+//        String surname = (String) session.getAttribute("surname");
+//        Integer age = (Integer) session.getAttribute("age");
 
 
         PrintWriter pw = response.getWriter();
