@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class GetCookiesServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        response.sendRedirect("/showCart.jsp");
+        response.sendRedirect("/index.jsp");
 
         PrintWriter pw = response.getWriter();
         Scanner scanner = new Scanner(System.in);
