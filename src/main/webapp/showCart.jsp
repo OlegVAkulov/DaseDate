@@ -1,5 +1,6 @@
 <%@ page import="java.sql.*" %>
-<%@ page import="java.io.PrintWriter" %><%--
+<%@ page import="java.io.PrintWriter" %>
+<%@ page import="somePackage.User" %><%--
   Created by IntelliJ IDEA.
   User: akulo
   Date: 12.02.2022
@@ -21,7 +22,13 @@
     <strong>User Age</strong>:<input type="number" name="age"><br>
     <input type="submit" value="INSERT">
     <%
-        PrintWriter pw = response.getWriter();
+
+        HttpSession httpSession = request.getSession();
+        User user = (User) session.getAttribute("user");
+        String name = request.getParameter("name");
+        String surname = request.getParameter("surname");
+        int age = Integer.parseInt(request.getParameter("age"));
+
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
