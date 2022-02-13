@@ -16,7 +16,7 @@ public class GetCookiesServlet extends HttpServlet {
         Cookie name = cookies[0];
         Cookie surname = cookies[1];
         Cookie age = cookies[2];
-        HttpSession session = request.getSession();
+//        HttpSession session = request.getSession();
 //        String name = (String) session.getAttribute("name");
 //        String surname = (String) session.getAttribute("surname");
 //        Integer age = (Integer) session.getAttribute("age");
