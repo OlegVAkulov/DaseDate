@@ -38,18 +38,10 @@ public class SetCookiesServlet extends HttpServlet {
         cookie2.setMaxAge(24 * 60 * 60);
         cookie3.setMaxAge(24 * 60 * 60);
 
-//        HttpSession session = request.getSession();
-//        String name1 = (String) session.getAttribute("name");
-//        String surname1 = (String) session.getAttribute("surname");
-//        Integer age1 = (Integer) session.getAttribute("age");
         String name1 = String.valueOf(cookie1);
         String surname1 = String.valueOf(cookie2);
         int age1 = Integer.parseInt(String.valueOf(cookie3));
 
-
-//        user.setName(name1);
-//        user.setSurname(surname1);
-//        user.setAge(age1);
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
@@ -60,9 +52,11 @@ public class SetCookiesServlet extends HttpServlet {
                     "jdbc:postgresql://192.168.0.32:5432/test_db",
                     "postgres", "123qwerty321");
 
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT into people(name, surname,age) VALUES ('name1', 'surname1', 'age1')");
+
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT into people(name, surname,age) VALUES (name1, surname1, age1)");
 
             preparedStatement.executeUpdate();
+            connection.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
