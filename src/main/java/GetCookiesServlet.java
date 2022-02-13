@@ -18,11 +18,27 @@ public class GetCookiesServlet extends HttpServlet {
 //        String surname = String.valueOf(cookies[1]);
 //        int age = Integer.parseInt(String.valueOf(cookies[2]));
         pw.println("<head>");
+        pw.println("cookies length: " + cookies.length);
+
         for (Cookie cookie : cookies) {
             pw.println("<h1>" + cookie.getName() + "  " + cookie.getValue() + "</h1>");
         }
         pw.println("</head>");
-
+        try {
+            Class.forName("org.postgresql.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            Connection connection = DriverManager.getConnection(
+                    "jdbc:postgresql://192.168.0.32:5432/test_db",
+                    "postgres", "123qwerty321");
+            Statement statement = connection.createStatement();
+            statement.executeQuery("INSERT into people(name, surname,age) VALUES (name, surname, age)");
+            statement.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
 
 //        HttpSession session = request.getSession();
 //        String name = (String) session.getAttribute("name");
@@ -45,7 +61,7 @@ public class GetCookiesServlet extends HttpServlet {
                     "jdbc:postgresql://192.168.0.32:5432/test_db",
                     "postgres", "123qwerty321");
             Statement statement = connection.createStatement();
-            statement.executeQuery("INSERT into people(name, surname,age) VALUES (name, surname, age)");
+//            statement.executeQuery("INSERT into people(name, surname,age) VALUES (name, surname, age)");
             ResultSet resultSet = statement.executeQuery("SELECT * from people");
             pw.println("ID\tNAME\t\tSURNAME\t\tAGE");
             pw.println();
