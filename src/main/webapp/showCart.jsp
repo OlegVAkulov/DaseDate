@@ -32,7 +32,7 @@
                     "jdbc:postgresql://192.168.0.32:5432/test_db",
                     "postgres", "123qwerty321");
             Statement statement = connection.createStatement();
-            statement.executeQuery("INSERT INTO people VALUES(" +
+            statement.executeQuery("INSERT INTO people VALUES" +
                     "(name , surname, age)");
             statement.close();
             RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
