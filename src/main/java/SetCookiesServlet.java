@@ -48,12 +48,12 @@ public class SetCookiesServlet extends HttpServlet {
         response.addCookie(cookie1);
         response.addCookie(cookie2);
         response.addCookie(cookie3);
-        user.setName(name1);
-        user.setSurname(surname1);
-        user.setAge(age1);
+//        user.setName(name1);
+//        user.setSurname(surname1);
+//        user.setAge(age1);
 
         pw.println("<head>");
-        pw.println("<h1>" +user.getName() + "  " + user.getSurname() + "  " + user.getAge() + " </h1>");
+//        pw.println("<h1>" +user.getName() + "  " + user.getSurname() + "  " + user.getAge() + " </h1>");
 
         pw.println("<a href=\"GetCookiesServlet\">Add to Base</a>");
         pw.println("</head>");
