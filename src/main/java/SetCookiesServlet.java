@@ -36,15 +36,23 @@ public class SetCookiesServlet extends HttpServlet {
 
 
 
+
+
         response.addCookie(cookie1);
         response.addCookie(cookie2);
         response.addCookie(cookie3);
-        Cookie[] cookies = request.getCookies();
         pw.println("<head>");
-        for (Cookie cookie : cookies) {
-            pw.println("<h1>" + cookie.getName() + "  " + cookie.getValue() + "</h1>");
-        }
+        pw.println("<input type=\"submit\" value=\"ADD TO BASE\">");
         pw.println("</head>");
+
+
+
+//        Cookie[] cookies = request.getCookies();
+//        pw.println("<head>");
+//        for (Cookie cookie : cookies) {
+//            pw.println("<h1>" + cookie.getName() + "  " + cookie.getValue() + "</h1>");
+//        }
+//        pw.println("</head>");
 //        pw.println("<a href=\"GetCookiesServlet\">Add to Base</a>");
     }
 
