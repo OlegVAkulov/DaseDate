@@ -41,7 +41,7 @@ public class GetCookiesServlet extends HttpServlet {
 //        } catch (SQLException throwables) {
 //            throwables.printStackTrace();
 //        }
-        response.sendRedirect("https://www.google.com");
+        response.sendRedirect("/showCart.jsp");
 
     }
 
