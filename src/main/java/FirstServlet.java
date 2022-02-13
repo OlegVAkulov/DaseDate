@@ -25,10 +25,11 @@ public class FirstServlet extends HttpServlet {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * from people");
             while (resultSet.next()){
+                pw.println("NAME\t\tSURNAME\t\tAGE");
                 pw.print(resultSet.getString("name"));
-                pw.print("\t");
+                pw.print("\t\t");
                 pw.print(resultSet.getString("surname" ));
-                pw.print("\t");
+                pw.print("\t\t");
                 pw.println(resultSet.getString("age"));
 
 
