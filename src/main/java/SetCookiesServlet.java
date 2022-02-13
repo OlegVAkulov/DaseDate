@@ -60,7 +60,7 @@ public class SetCookiesServlet extends HttpServlet {
                     "jdbc:postgresql://192.168.0.32:5432/test_db",
                     "postgres", "123qwerty321");
 
-            PreparedStatement preparedStatement = connection.prepareStatement("INSERT into people(name, surname,age) VALUES (name1, surname1, age1)");
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT into people(name, surname,age) VALUES ('name1', 'surname1', 'age1')");
 
             preparedStatement.executeUpdate();
         } catch (SQLException throwables) {
