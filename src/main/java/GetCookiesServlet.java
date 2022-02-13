@@ -27,7 +27,7 @@ public class GetCookiesServlet extends HttpServlet {
         List<User> listUser = userDAO.selectAllUsers();
         request.setAttribute("listUser", listUser);
         for (int i = 0; i < listUser.size(); i++) {
-            pw.println(listUser.get(i).toString());
+            pw.println(listUser.get(i).getName() + " " + listUser.get(i).getSurname() + " " + listUser.get(i).getAge());
         }
 
 //            RequestDispatcher dispatcher = request.getRequestDispatcher("user-list.jsp");
