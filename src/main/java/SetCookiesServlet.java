@@ -3,10 +3,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 
 @WebServlet(name = "SetCookiesServlet", value = "/SetCookiesServlet")
@@ -62,9 +59,9 @@ public class SetCookiesServlet extends HttpServlet {
             Connection connection = DriverManager.getConnection(
                     "jdbc:postgresql://192.168.0.32:5432/test_db",
                     "postgres", "123qwerty321");
-            Statement statement = connection.createStatement();
-            statement.executeQuery("INSERT into people(name, surname,age) VALUES (name1, surname1, age1)");
-            statement.close();
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT into people(name, surname,age) VALUES (name1, surname1, age1)");
+
+            preparedStatement.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
