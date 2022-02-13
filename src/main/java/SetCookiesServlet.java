@@ -50,9 +50,9 @@ public class SetCookiesServlet extends HttpServlet {
         int age1 = Integer.parseInt(String.valueOf(cookie3));
 
 
-        user.setName(name1);
-        user.setSurname(surname1);
-        user.setAge(age1);
+//        user.setName(name1);
+//        user.setSurname(surname1);
+//        user.setAge(age1);
         try {
             Class.forName("org.postgresql.Driver");
         } catch (ClassNotFoundException e) {
@@ -63,7 +63,7 @@ public class SetCookiesServlet extends HttpServlet {
                     "jdbc:postgresql://192.168.0.32:5432/test_db",
                     "postgres", "123qwerty321");
             Statement statement = connection.createStatement();
-            statement.executeQuery("INSERT into people(name, surname,age) VALUES (user.getName, user.getSurname, user.getAge)");
+            statement.executeQuery("INSERT into people(name, surname,age) VALUES (name1, surname1, age1)");
             statement.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
