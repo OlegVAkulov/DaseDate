@@ -48,20 +48,20 @@
             </tr>
             </thead>
             <tbody>
-            <!--   for (Todo todo: todos) {  -->
+
             <с:forEach var="user" items="${listUser}">
 
                 <tr>
-                    <td><с:out value="${user.id}" /></td>
-                    <td><с:out value="${user.name}" /></td>
-                    <td><с:out value="${user.surname}" /></td>
-                    <td><с:out value="${user.age}" /></td>
-                    <td><a href="edit?id=<с:out value='${user.id}' />">Edit</a>
+                    <td><${user.id} /></td>
+                    <td><${user.name} /></td>
+                    <td><${user.surname}/></td>
+                    <td><${user.age} /></td>
+                    <td><a href="edit?id=<'${user.id}' />">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp; <a
-                                href="delete?id=<с:out value='${user.id}' />">Delete</a></td>
+                                href="delete?id=<'${user.id}' />">Delete</a></td>
                 </tr>
             </с:forEach>
-            <!-- } -->
+
             </tbody>
 
         </table>
