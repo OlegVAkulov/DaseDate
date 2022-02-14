@@ -51,10 +51,10 @@
             <с:forEach var="user" items="${listUser}">
 
                 <tr>
-                    <td><${user.id} /></td>
-                    <td><${user.name} /></td>
-                    <td><${user.surname}/></td>
-                    <td><${user.age} /></td>
+                    <td><c:out value="${user.id}" /></td>
+                    <td><c:out value="${user.name}" /></td>
+                    <td><c:out value="${user.surname}" /></td>
+                    <td><c:out value="${user.age}" /></td>
                     <td><a href="edit?id=<'${user.id}' />">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp; <a
                                 href="delete?id=<'${user.id}' />">Delete</a></td>
