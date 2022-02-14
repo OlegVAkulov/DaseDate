@@ -67,10 +67,10 @@
     </div>
 </div>
 
-<a href="FirstServlet">Data Base</a>
-<a href="GetCookiesServlet">List Users</a>
-<a href="SetCookiesServlet">Search for id</a>
-<a href="AddPetrIvanovServlet">AddPetrIvanov</a>
+<%--<a href="FirstServlet">Data Base</a>--%>
+<%--<a href="GetCookiesServlet">List Users</a>--%>
+<%--<a href="SetCookiesServlet">Search for id</a>--%>
+<%--<a href="AddPetrIvanovServlet">AddPetrIvanov</a>--%>
 
 
 </body>
