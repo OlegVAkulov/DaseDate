@@ -49,18 +49,18 @@
             </thead>
             <tbody>
             <!--   for (Todo todo: todos) {  -->
-            <:forEach var="user" items="${listUser}">
+            <с:forEach var="user" items="${listUser}">
 
                 <tr>
-                    <td><:out value="${user.id}" /></td>
-                    <td><:out value="${user.name}" /></td>
-                    <td><:out value="${user.surname}" /></td>
-                    <td><:out value="${user.age}" /></td>
-                    <td><a href="edit?id=<:out value='${user.id}' />">Edit</a>
+                    <td><с:out value="${user.id}" /></td>
+                    <td><с:out value="${user.name}" /></td>
+                    <td><с:out value="${user.surname}" /></td>
+                    <td><с:out value="${user.age}" /></td>
+                    <td><a href="edit?id=<с:out value='${user.id}' />">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp; <a
-                                href="delete?id=<:out value='${user.id}' />">Delete</a></td>
+                                href="delete?id=<с:out value='${user.id}' />">Delete</a></td>
                 </tr>
-            </:forEach>
+            </с:forEach>
             <!-- } -->
             </tbody>
 

@@ -54,7 +54,7 @@ public class UserServlet extends HttpServlet {
         }
     }
 
-    private void listUser(HttpServletRequest request, HttpServletResponse response)
+    protected void listUser(HttpServletRequest request, HttpServletResponse response)
             throws SQLException, IOException, ServletException {
         List<User> listUser = userDAO.selectAllUsers();
         request.setAttribute("listUser", listUser);
@@ -64,7 +64,7 @@ public class UserServlet extends HttpServlet {
 
     private void showNewForm(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user-form.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("showCart.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -72,7 +72,7 @@ public class UserServlet extends HttpServlet {
             throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         User existingUser = userDAO.selectUser(id);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("user-form.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("showCart.jsp");
         request.setAttribute("user", existingUser);
         dispatcher.forward(request, response);
 
