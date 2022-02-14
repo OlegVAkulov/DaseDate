@@ -16,8 +16,8 @@ public class UserDao {
 	private static final String INSERT_USERS_SQL = "INSERT INTO people" + "  (name, surname, age) VALUES "
 			+ " (?, ?, ?);";
 
-	private static final String SELECT_USER_BY_ID = "select id,name,surname, age from people where id =?";
-	private static final String SELECT_ALL_USERS = "select * from people";
+	private static final String SELECT_USER_BY_ID = "select id,name,surname, age from people where id =?;";
+	private static final String SELECT_ALL_USERS = "select * from people;";
 	private static final String DELETE_USERS_SQL = "delete from people where id = ?;";
 	private static final String UPDATE_USERS_SQL = "update people set name = ?,surname= ?, age =? where id = ?;";
 
