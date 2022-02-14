@@ -1,4 +1,3 @@
-<%@ page import="logic.User" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html>
@@ -50,7 +49,7 @@
             </thead>
             <tbody>
             <!--   for (Todo todo: todos) {  -->
-<%--            <% for (User user:users){%>--%>
+            <forEach var="user" items="${listUser}">
 
                 <tr>
                     <td><:out value="${user.id}" /></td>
@@ -61,7 +60,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp; <a
                                 href="delete?id=<:out value='${user.id}' />">Delete</a></td>
                 </tr>
-<%--            <%=}%>--%>
+            </forEach>
             <!-- } -->
             </tbody>
 
