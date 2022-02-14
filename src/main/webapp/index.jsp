@@ -49,18 +49,18 @@
             </thead>
             <tbody>
             <!--   for (Todo todo: todos) {  -->
-            <c:forEach var="user" items="${listUser}">
+            <:forEach var="user" items="${listUser}">
 
                 <tr>
-                    <td><c:out value="${user.id}" /></td>
-                    <td><c:out value="${user.name}" /></td>
-                    <td><c:out value="${user.surname}" /></td>
-                    <td><c:out value="${user.age}" /></td>
-                    <td><a href="edit?id=<c:out value='${user.id}' />">Edit</a>
+                    <td><:out value="${user.id}" /></td>
+                    <td><:out value="${user.name}" /></td>
+                    <td><:out value="${user.surname}" /></td>
+                    <td><:out value="${user.age}" /></td>
+                    <td><a href="edit?id=<:out value='${user.id}' />">Edit</a>
                         &nbsp;&nbsp;&nbsp;&nbsp; <a
-                                href="delete?id=<c:out value='${user.id}' />">Delete</a></td>
+                                href="delete?id=<:out value='${user.id}' />">Delete</a></td>
                 </tr>
-            </c:forEach>
+            </:forEach>
             <!-- } -->
             </tbody>
 
@@ -68,10 +68,10 @@
     </div>
 </div>
 
-<a href="FirstServlet">Data Base</a>
-<a href="GetCookiesServlet">List Users</a>
-<a href="SetCookiesServlet">Search for id</a>
-<a href="AddPetrIvanovServlet">AddPetrIvanov</a>
+<%--<a href="FirstServlet">Data Base</a>--%>
+<%--<a href="GetCookiesServlet">List Users</a>--%>
+<%--<a href="SetCookiesServlet">Search for id</a>--%>
+<%--<a href="AddPetrIvanovServlet">AddPetrIvanov</a>--%>
 
 
 </body>
