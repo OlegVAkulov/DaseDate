@@ -51,7 +51,7 @@
             <с:forEach var="user" items="${listUser}">
 
                 <tr>
-                    <td><c:out value="${user.id}" /></td>
+                    <td>${user.id}</td>
                     <td><c:out value="${user.name}" /></td>
                     <td><c:out value="${user.surname}" /></td>
                     <td><c:out value="${user.age}" /></td>
