@@ -49,7 +49,7 @@
             </thead>
             <tbody>
             <!--   for (Todo todo: todos) {  -->
-            <forEach var="user" items="${listUser}">
+            <:forEach var="user" items="${listUser}">
 
                 <tr>
                     <td><:out value="${user.id}" /></td>
@@ -60,7 +60,7 @@
                         &nbsp;&nbsp;&nbsp;&nbsp; <a
                                 href="delete?id=<:out value='${user.id}' />">Delete</a></td>
                 </tr>
-            </forEach>
+            </:forEach>
             <!-- } -->
             </tbody>
 
