@@ -1,5 +1,6 @@
 package logic;
 
+
 public class User {
     protected int id;
     protected String name;
@@ -41,4 +42,13 @@ public class User {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
+    }
 }

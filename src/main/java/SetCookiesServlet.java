@@ -12,14 +12,22 @@ import java.sql.*;
 @WebServlet(name = "SetCookiesServlet", value = "/SetCookiesServlet")
 public class SetCookiesServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private UserDao userDAO= new UserDao();
+    private UserDao userDAO;
+    private HttpServletRequest request;
 
     public void init() {
         userDAO = new UserDao();
     }
 
+//    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+//            throws ServletException, IOException {
+//        this.request = request;
+//        doGet(request, response);
+//    }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
